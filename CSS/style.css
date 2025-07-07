@@ -7,7 +7,7 @@
             margin: 0px auto; 
             width:800px;
             height: 700px
-;           background: no-repeat url("/images/ScrabbleBoard.jpg");
+;           background: no-repeat url("../images/ScrabbleBoard.jpg");
             background-size: 97%;
             background-position: center center;
         }
