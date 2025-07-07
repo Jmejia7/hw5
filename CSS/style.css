@@ -101,7 +101,7 @@
         .tile-rack {
             margin: 10px auto;
             padding: 20px;
-            background:no-repeat url("/images/scrabble-tile-holder-406774_640.png");
+            background:no-repeat url("../images/scrabble-tile-holder-406774_640.png");
             background-position: center;
             border-radius: 10px;
             display: flex;
