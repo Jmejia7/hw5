@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scrabble </title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+</head>
+<body>
+     <div class="board-background">
+        <h1>Scrabble</h1>
+        <div class="board-container" id="board-container">
+            <div class="board-square normal-square" data-position="0"></div>
+            <div class="board-square normal-square" data-position="1"></div>
+            <div class="board-square double-word" data-position="2">DOUBLE<br>WORD<br>SCORE</div>
+            <div class="board-square normal-square" data-position="3"></div>
+            <div class="board-square normal-square" data-position="4"></div>
+            <div class="board-square normal-square" data-position="5"></div>
+            <div class="board-square double-letter" data-position="6">DOUBLE<br>LETTER<br>SCORE</div>
+            <div class="board-square normal-square" data-position="7"></div>
+            <div class="board-square double-letter" data-position="8">DOUBLE<br>LETTER<br>SCORE</div>
+            <div class="board-square normal-square" data-position="9"></div>
+            <div class="board-square normal-square" data-position="10"></div>
+            <div class="board-square normal-square" data-position="11"></div>
+            <div class="board-square double-word" data-position="12">DOUBLE<br>WORD<br>SCORE</div>
+            <div class="board-square normal-square" data-position="13"></div>
+            <div class="board-square normal-square" data-position="14"></div>
+        </div>
+
+ </div>
+
+
+    <div class="game-container">
+
+            <div class="instructions">
+            <h3>Instructions:</h3>
+            <ul>
+                <li>Drag letter tiles from the rack to the board squares on line 3</li>
+                <li>Create words by placing tiles adjacent to each other</li>
+                <li>Blue squares multiply letter value (2x points)</li>
+                <li>Pink squares multiply word total value (2x points)</li>
+                <li>Click "Submit Word" when done or Click new deal for new set of tiles</li>
+            </ul>
+        </div>
+
+  <div class="game-row">
+        <div class="tile-rack" id="tile-rack"></div>
+                <div class="controls">
+            <button class="submit-btn" >Submit Word</button> <!--added fucntions for event handle -->
+            <button class="reset-btn" >Reset Board</button>
+            <button class="deal-btn">Deal New Tiles</button>
+        </div>
+
+        <div class="score-display" id="score-display">
+            <div class="word-display" id="word-display">Current Word: </div>
+            <div id="score-text">Score: 0</div>
+        </div>
+  </div>
+
+        <div id="message-area">
+        
+    </div>
+
+    <script src="JS/ScrabbleUI.js"></script>
+    <script src="JS/Scrabble_Pieces_AssociativeArray_Jesse.js"></script>
+</body>
+</html>

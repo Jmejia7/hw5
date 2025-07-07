@@ -1,0 +1,284 @@
+ body {
+            font-family: Arial, sans-serif;
+            padding: 5px;
+            min-width:759px ;
+        }
+        .board-background {
+            margin: 0px auto; 
+            width:800px;
+            height: 700px
+;           background: no-repeat url("/images/ScrabbleBoard.jpg");
+            background-size: 97%;
+            background-position: center center;
+        }
+
+        .game-row {
+            height:100px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            width: 100%;
+            max-width: 1200px;
+        }
+        .game-container {
+            min-width: 600px;
+            max-width: 1200px;
+            margin: 0px auto;
+            text-align: center;
+    
+        }
+
+        h1 {
+            color: #000305;
+            background-color: white;
+            height:30px;
+            margin-top: 0px;
+            margin-bottom:84px ;
+            font-size:x;        
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+
+        .board-container {
+            display: flex;
+            justify-content: center;
+            gap: 1px;
+        }
+
+        .board-square {
+            width: 45px;
+            height: 35px;
+            border: 2px solid #8B4513;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10px;
+            font-weight: bold;
+            text-align: center;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .normal-square {
+            background-color: #DEB887;
+        }
+
+        .double-letter {
+            background-color: #87CEEB;
+            color: #000080;
+        }
+
+        .triple-letter {
+            background-color: #4169E1;
+            color: white;
+        }
+
+        .double-word {
+            background-color: #FFB6C1;
+            color: #8B0000;
+        }
+
+        .triple-word {
+            background-color: #FF6347;
+            color: white;
+        }
+
+        .center-star {
+            background-color: #FFB6C1;
+            color: #8B0000;
+        }
+
+        .center-star::after {
+            content: "★";
+            font-size: 20px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .tile-rack {
+            margin: 10px auto;
+            padding: 20px;
+            background:no-repeat url("/images/scrabble-tile-holder-406774_640.png");
+            background-position: center;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            gap: 5px;
+            min-height: 80px;
+            align-items: center;
+        }
+
+        .tile {
+            width: 60px;
+            height: 60px;
+            background-color: #F5DEB3;
+            border: 2px solid #8B4513;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            cursor: move;
+            font-weight: bold;
+            font-size: 24px;
+            color: #2c3e50;
+            position: relative;
+            box-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .tile-img {
+         width: 50px;
+        height: 50px;
+        object-fit: contain;
+        pointer-events: none; 
+            }
+
+        .tile .letter {
+            font-size: 24px;
+            margin-bottom: 2px;
+        }
+
+        .tile .value {
+            font-size: 12px;
+            position: absolute;
+            bottom: 4px;
+            right: 4px;
+        }
+
+        .tile-rack .tile .letter,
+        .tile-rack .tile .value {
+        display: none;
+        }
+
+        .tile.ui-draggable-dragging {
+            transform: rotate(5deg);
+            z-index: 1000;
+        }
+
+        .board-square.ui-droppable-hover {
+            background-color: #98FB98 !important;
+        }
+
+        .board-square .placed-tile {
+            width: 40px;
+            height: 40px;
+            background-color: #F5DEB3;
+            border: 1px solid #8B4513;
+            border-radius: 3px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 20px;
+            color: #2c3e50;
+            position: relative;
+        }
+
+        .board-square .placed-tile .letter {
+            font-size: 20px;
+        }
+
+        .board-square .placed-tile .value {
+            font-size: 10px;
+            position: absolute;
+            bottom: 2px;
+            right: 2px;
+        }
+
+        .controls {
+            margin: 20px 0;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .submit-btn {
+            background-color: #27ae60;
+            color: white;
+        }
+
+        .submit-btn:hover {
+            background-color: #219a52;
+        }
+
+        .reset-btn {
+            background-color: #e74c3c;
+            color: white;
+        }
+
+        .reset-btn:hover {
+            background-color: #c0392b;
+        }
+
+        .deal-btn {
+            background-color: #3498db;
+            color: white;
+        }
+
+        .deal-btn:hover {
+            background-color: #2980b9;
+        }
+
+        .score-display {
+            width:300px;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 24px;
+            font-weight: bold;
+            color: #2c3e50;
+            padding: 20px;
+            background-color: #ecf0f1;
+            border-radius: 10px;
+        }
+
+        .instructions {
+            margin-top: 0px;
+            height: 90px;
+            min-width: 1200px; 
+            padding: 2px;
+            background-color: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 5px;
+            text-wrap:wrap;
+            text-align: left;
+        }
+          .instructions ul {
+            font-size:  x-small;
+          }
+          .instructions h3 {
+            margin-top: 2px;
+            font-size: small;
+
+          }
+
+        .word-display {
+            margin: 10px 0;
+            font-size: 18px;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        .error-message {
+            color: #e74c3c;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+
+        .success-message {
+            color: #27ae60;
+            font-weight: bold;
+            margin: 10px 0;
+        }
